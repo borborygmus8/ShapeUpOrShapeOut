@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Megrim');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market');
+
+:root {
+    --megrim-font: 'Megrim', cursive;
+    --chelsea-font: 'Chelsea Market', cursive;
+}
+
+body {
+    display: flex;
+    margin: 0;
+}
+
+input {
+    width: 80%;
+    padding: 5px;
+    font-family: var(--chelsea-font);
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
+}
+
+h1, h2 {
+    color: #f00;
+    font-family: var(--megrim-font);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 5px 0 20px;
+}
+
+button {
+    background-color: #f00;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-family: var(--megrim-font);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 5px 0 40px;
+    cursor: pointer;
+    outline: none;
+}
+
+::placeholder {
+    font-family: var(--chelsea-font);
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.inputs-div,
+.canvas-div,
+.info-div {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs-div,
+.info-div {
+    width: 20vw;
+    background-color: #000;
+    min-width: 205px;
+}
+
+.canvas-div {
+    width: 60vw;
+    background-color: #fff;
+    min-width: 615px;
+}
+
+.canvas {
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(217deg, rgba(255,0,0,.5), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.5), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.5), rgba(0,0,255,0) 70.71%);
+    position: relative;
+    overflow: hidden;
+}
+
+.circle,
+.triangle,
+.rectangle,
+.square {
+    position: absolute;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.circle {
+    background-color: purple;
+    border-radius: 50%;
+}
+
+.triangle {
+    background: linear-gradient(45deg, yellow 50%, transparent 50% 100%);
+}
+
+.rectangle {
+    background-color: green;
+}
+
+.square {
+    background-color: red;
+}
